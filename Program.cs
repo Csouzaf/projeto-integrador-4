@@ -1,7 +1,15 @@
+using ecommerce_music_back.Repository;
+using ecommerce_music_back.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<IUsuarioRepository, UsuarioService>();
+
+
+
 
 var app = builder.Build();
 
