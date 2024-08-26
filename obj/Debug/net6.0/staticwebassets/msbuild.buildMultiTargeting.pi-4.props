@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\pi-4.props" />
+</Project>

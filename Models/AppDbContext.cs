@@ -9,4 +9,6 @@ public class AppDbContext : DbContext
     }
 
     public DbSet<Usuario> usuario { get; set; }
+
+    public DbSet<UsuarioAdm> usuarioAdm { get; set; }
 }
