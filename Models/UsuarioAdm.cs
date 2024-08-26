@@ -44,6 +44,7 @@ namespace pi_4.Models
             id = Guid.NewGuid();
             dataCriacao = DateTime.Now;
         }
+        
     }
 }
 

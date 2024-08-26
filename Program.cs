@@ -1,17 +1,26 @@
 using ecommerce_music_back.Repository;
 using ecommerce_music_back.Services;
+using pi_4.Models;
+using pi_4.Repository;
+using pi_4.service;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddCors();
+builder.Services.AddAutoMapper(typeof(AutoMapperPerfil));
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<IUsuarioRepository, UsuarioService>();
+builder.Services.AddScoped<IUsuarioAdmRepository, UsuarioAdmService>();
+builder.Services.AddScoped<IRegistroRepository, RegistroService>();
 
 
 
 
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
