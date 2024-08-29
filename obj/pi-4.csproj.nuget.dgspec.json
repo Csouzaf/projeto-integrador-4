@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\xfebz\\Documents\\Programing\\Cardapio\\projeto-integrador-4\\pi-4.csproj": {}
+    "D:\\OneDrive\\Programação\\pi-4\\pi-4.csproj": {}
   },
   "projects": {
-    "C:\\Users\\xfebz\\Documents\\Programing\\Cardapio\\projeto-integrador-4\\pi-4.csproj": {
+    "D:\\OneDrive\\Programação\\pi-4\\pi-4.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\xfebz\\Documents\\Programing\\Cardapio\\projeto-integrador-4\\pi-4.csproj",
+        "projectUniqueName": "D:\\OneDrive\\Programação\\pi-4\\pi-4.csproj",
         "projectName": "pi-4",
-        "projectPath": "C:\\Users\\xfebz\\Documents\\Programing\\Cardapio\\projeto-integrador-4\\pi-4.csproj",
-        "packagesPath": "C:\\Users\\xfebz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\xfebz\\Documents\\Programing\\Cardapio\\projeto-integrador-4\\obj\\",
+        "projectPath": "D:\\OneDrive\\Programação\\pi-4\\pi-4.csproj",
+        "packagesPath": "C:\\Users\\csouz\\.nuget\\packages\\",
+        "outputPath": "D:\\OneDrive\\Programação\\pi-4\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\xfebz\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\csouz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -73,19 +69,19 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
+              "version": "[6.0.31, 6.0.31]"
             },
             {
               "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[6.0.28, 6.0.28]"
+              "version": "[6.0.31, 6.0.31]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
+              "version": "[6.0.31, 6.0.31]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.28, 6.0.28]"
+              "version": "[6.0.31, 6.0.31]"
             }
           ],
           "frameworkReferences": {
@@ -96,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
