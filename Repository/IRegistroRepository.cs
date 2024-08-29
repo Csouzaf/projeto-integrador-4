@@ -5,5 +5,7 @@ namespace pi_4.Repository;
 
 public interface IRegistroRepository
 {
- Task<RegistroDTO> criarUsuarioAdm(UsuarioAdm registroUsuarioAdm, Usuario registroUsuario);
+ Task<RegistroDTO> criarUsuario(Usuario registroUsuario);
+
+ Task<RegistroDTO> criarUsuarioAdm(UsuarioAdm registroUsuarioAdm);
 }

@@ -5,6 +5,7 @@ using System.Text.Json.Serialization;
 
 namespace pi_4.Models;
 
+[Table("usuario_produto")]
 public class UsuarioProduto
 {
         [Key]

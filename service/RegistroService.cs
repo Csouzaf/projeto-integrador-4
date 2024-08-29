@@ -9,16 +9,16 @@ public class RegistroService : IRegistroRepository
 {
   private readonly AppDbContext _appDbContext;
   private readonly IMapper _mapper;
-   public RegistroService(AppDbContext appDbContext, IMapper mapper)
-   {
-     _appDbContext = appDbContext;
-     _mapper = mapper;
-   }
+  public RegistroService(AppDbContext appDbContext, IMapper mapper)
+  {
+    _appDbContext = appDbContext;
+    _mapper = mapper;
+  }
 
-   public async Task<RegistroDTO> criarUsuarioAdm(UsuarioAdm registroUsuarioAdm, Usuario registroUsuario)
-   {
-    
-    if (registroUsuarioAdm.cnpj != null && registroUsuario.cpf == "")
+  public async Task<RegistroDTO> criarUsuarioAdm(UsuarioAdm registroUsuarioAdm)
+  {
+
+    if (registroUsuarioAdm.cnpj != null)
     {
       await _appDbContext.usuarioAdm.AddAsync(registroUsuarioAdm);
       await _appDbContext.SaveChangesAsync();
@@ -27,12 +27,27 @@ public class RegistroService : IRegistroRepository
     }
     else
     {
+      return null;
+    }
+  
+
+  }
+
+  public async Task<RegistroDTO> criarUsuario(Usuario registroUsuario)
+  {
+
+    if (registroUsuario.cpf == "")
+    {
       await _appDbContext.usuario.AddAsync(registroUsuario);
       await _appDbContext.SaveChangesAsync();
       var criarUsuario = _mapper.Map<RegistroDTO>(registroUsuario);
       return criarUsuario;
     }
-
-   }
+    else
+    {
+      return null;
+    }
+  
+  }
 
 }

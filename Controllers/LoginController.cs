@@ -4,16 +4,17 @@ using pi_4.Models;
 
 namespace pi_4.Controllers;
 
+[ApiController]
+[Route("login")]
 public class LoginController : Controller
 {
-  //verificar no banco se o usuario existe a partir das informações de email e senha. 
 
   private readonly AppDbContext _appDbContext;
 
-  public LoginController()
-  {
-    _appDbContext = new AppDbContext();
-  } 
+    public LoginController(AppDbContext appDbContext)
+   {
+      _appDbContext = appDbContext;
+   } 
 
   [HttpPost]
   public ActionResult<bool> Login(LoginDTO loginDTO)
@@ -26,8 +27,7 @@ public class LoginController : Controller
     }
     else
     {
-      ViewBag.Mensagem = "Email ou senha inválidas.";
-      return View();
+      return BadRequest("Email ou senha inválidos.");
     }
   }   
 }

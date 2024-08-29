@@ -20,10 +20,26 @@ public class RegistroController : Controller
    } 
 
    [HttpPost]
-   public async Task<ActionResult<RegistroDTO>> criarUsuario([FromBody] UsuarioAdm usuarioAdm, [FromBody] Usuario usuario)
+   public async Task<ActionResult<RegistroDTO>> criarUsuarioAdm([FromBody] UsuarioAdm usuarioAdm)
    {
 
-      var criarUsuario = _registroRepository.criarUsuarioAdm(usuarioAdm, usuario);
+      var criarUsuario = _registroRepository.criarUsuarioAdm(usuarioAdm);
+      if (criarUsuario != null)
+      {
+       return Created("criado", criarUsuario);
+      }
+      else
+      {
+       return BadRequest("Erro");
+      }
+
+   }
+
+   [HttpPost]
+   public async Task<ActionResult<RegistroDTO>> criarUsuario([FromBody] Usuario usuario)
+   {
+
+      var criarUsuario = _registroRepository.criarUsuario(usuario);
       if (criarUsuario != null)
       {
        return Created("criado", criarUsuario);

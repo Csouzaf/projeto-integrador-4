@@ -5,5 +5,7 @@ namespace pi_4.Repository;
 
 public interface IUsuarioProdutoRepository
 {
- Task<List<UsuarioAdm>> buscarTodosAsync();
+    Task<List<UsuarioProduto>> buscarTodosAsync();
+
+    Task<UsuarioProduto> criarProdutoAsync(UsuarioProduto usuarioProduto);
 }

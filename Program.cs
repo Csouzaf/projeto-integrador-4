@@ -21,6 +21,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IUsuarioRepository, UsuarioService>();
 builder.Services.AddScoped<IUsuarioAdmRepository, UsuarioAdmService>();
 builder.Services.AddScoped<IRegistroRepository, RegistroService>();
+builder.Services.AddScoped<IUsuarioProdutoRepository, UsuarioProdutoService>();
 
 //Fazendo conexão com o banco de dados
 

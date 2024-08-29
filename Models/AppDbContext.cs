@@ -16,6 +16,8 @@ public class AppDbContext : DbContext
 
     public DbSet<UsuarioAdm> usuarioAdm { get; set; }
 
+    public DbSet<UsuarioProduto> usuarioProduto { get; set; }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<UsuarioAdm>()
