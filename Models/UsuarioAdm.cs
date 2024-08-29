@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace pi_4.Models
 {
@@ -39,11 +40,17 @@ namespace pi_4.Models
         [Column("adm_usuario")]
         public bool admOuUsuario { get; set; }
 
+        public ICollection<UsuarioProduto> produtos { get; } = new List<UsuarioProduto>();
+
+       
+
+
         public UsuarioAdm()
         {
             id = Guid.NewGuid();
             dataCriacao = DateTime.Now;
         }
+        
     }
 }
 

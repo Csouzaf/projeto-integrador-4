@@ -7,12 +7,12 @@ namespace ecommerce_music_back.Services
 {
     public class UsuarioService : IUsuarioRepository
     {
-       private readonly AppDbContext _appDbContext;
+        private readonly AppDbContext _appDbContext;
 
-       public UsuarioService(AppDbContext appDbContext)
-       {
+        public UsuarioService(AppDbContext appDbContext)
+        {
             _appDbContext = appDbContext;
-       }
+        }
 
         public async Task<List<Usuario>> buscarTodosAsync()
         {
@@ -22,13 +22,13 @@ namespace ecommerce_music_back.Services
                 using (var context = _appDbContext)
                 {
                     usuarios = await context.usuario.ToListAsync();
-                              
+
                 }
-                
+
             }
             catch (Exception ex)
             {
-                
+
                 throw;
             }
 
