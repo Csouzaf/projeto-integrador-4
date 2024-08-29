@@ -15,4 +15,13 @@ public class AppDbContext : DbContext
     public DbSet<Usuario> usuario { get; set; }
 
     public DbSet<UsuarioAdm> usuarioAdm { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<UsuarioAdm>()
+            .HasMany(m => m.produtos)
+            .WithOne(m => m.usuarioAdm)
+            .HasForeignKey(m => m.usuarioAdmId);
+
+    }
 }

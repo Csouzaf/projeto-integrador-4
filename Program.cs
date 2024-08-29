@@ -1,10 +1,16 @@
 using ecommerce_music_back.Repository;
 using ecommerce_music_back.Services;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using pi_4.Models;
 using pi_4.Repository;
 using pi_4.service;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddEntityFrameworkNpgsql().AddDbContext<AppDbContext>(
+    options => options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"))
+);
+
 builder.Services.AddCors();
 builder.Services.AddAutoMapper(typeof(AutoMapperPerfil));
 
@@ -15,6 +21,9 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IUsuarioRepository, UsuarioService>();
 builder.Services.AddScoped<IUsuarioAdmRepository, UsuarioAdmService>();
 builder.Services.AddScoped<IRegistroRepository, RegistroService>();
+
+//Fazendo conexão com o banco de dados
+
 
 
 

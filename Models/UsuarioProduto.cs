@@ -1,6 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace pi_4.Models;
 
@@ -22,9 +23,18 @@ public class UsuarioProduto
         [Column("data_criacao")]
         public DateTime dataCriacao { get; set; }
 
+        [JsonIgnore]
+        public UsuarioAdm? usuarioAdm { get; set; }
+        
+        [ForeignKey("UsuarioAdm")]
+        [Column("usuario_adm_id")]
+        public int usuarioAdmId { get; set; }
+
+
         
         public UsuarioProduto()
         {
             dataCriacao = DateTime.Now;
         }
+
 }
