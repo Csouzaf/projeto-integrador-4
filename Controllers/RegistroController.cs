@@ -19,7 +19,7 @@ public class RegistroController : Controller
       _registroRepository = registroRepository;
    } 
 
-   [HttpPost]
+   [HttpPost()]
    public async Task<ActionResult<RegistroDTO>> criarUsuarioAdm([FromBody] UsuarioAdm usuarioAdm)
    {
 

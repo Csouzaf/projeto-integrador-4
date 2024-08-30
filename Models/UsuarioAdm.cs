@@ -40,6 +40,9 @@ namespace pi_4.Models
         [Column("adm_usuario")]
         public bool admOuUsuario { get; set; }
 
+        [Column("imagem")]
+        public string imagem { get; set; }
+
         public ICollection<UsuarioProduto> produtos { get; } = new List<UsuarioProduto>();
 
        
