@@ -20,7 +20,7 @@ public class HomeController : Controller
     } 
 
     [HttpGet]
-    public async Task<List<UsuarioProduto>> usuarioProduto()
+    public async Task<List<UsuarioProduto>> listaProdutos()
     {
         return await _usuarioProdutoRepository.buscarTodosAsync();
         
