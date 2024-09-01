@@ -11,6 +11,6 @@
 >> 3.2 <br>
 >>> Posteriormente utiliza o ainda no terminal o dotnet ef database update <br><br>
 
->4. Link app frontend: 
->5. Rodar aplicação com frontend https://github.com/Carlosomr/cardapiosenac
+>4. Link app frontend: https://github.com/Carlosomr/cardapiosenac <br>
+>5. Rodar aplicação com frontend 
 
