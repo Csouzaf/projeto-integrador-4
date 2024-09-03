@@ -29,7 +29,7 @@ public class UsuarioProduto
         
         [ForeignKey("UsuarioAdm")]
         [Column("usuario_adm_id")]
-        public int usuarioAdmId { get; set; }
+        public Guid usuarioAdmId { get; set; }
 
 
         

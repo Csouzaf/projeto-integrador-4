@@ -7,6 +7,7 @@ using pi_4.Repository;
 using pi_4.service;
 
 var builder = WebApplication.CreateBuilder(args);
+
 builder.Services.AddEntityFrameworkNpgsql().AddDbContext<AppDbContext>(
     options => options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"))
 );

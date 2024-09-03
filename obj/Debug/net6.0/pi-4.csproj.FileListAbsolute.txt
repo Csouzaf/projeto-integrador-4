@@ -73,3 +73,5 @@ D:\OneDrive\Programação\pi-4\obj\Debug\net6.0\refint\pi-4.dll
 D:\OneDrive\Programação\pi-4\obj\Debug\net6.0\pi-4.pdb
 D:\OneDrive\Programação\pi-4\obj\Debug\net6.0\pi-4.genruntimeconfig.cache
 D:\OneDrive\Programação\pi-4\obj\Debug\net6.0\ref\pi-4.dll
+D:\OneDrive\Programação\pi-4\bin\Debug\net6.0\Humanizer.dll
+D:\OneDrive\Programação\pi-4\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll

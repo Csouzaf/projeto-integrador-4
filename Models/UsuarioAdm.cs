@@ -31,6 +31,9 @@ namespace pi_4.Models
         [Column("cep")]
         public string cep { get; set; }
 
+        [Column("cpf")]
+        public string cpf { get; set; }
+
         [Column("cnpj")]
         public string cnpj { get; set; }
 
