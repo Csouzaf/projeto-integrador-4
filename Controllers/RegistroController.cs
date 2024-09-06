@@ -8,7 +8,7 @@ using pi_4.Repository;
 namespace pi_4.Controllers;
 
 [ApiController]
-[Route("registro")]
+[Route("/registro")]
 public class RegistroController : Controller
 {
 
@@ -19,11 +19,11 @@ public class RegistroController : Controller
       _registroRepository = registroRepository;
    } 
 
-   [HttpPost()]
+   [HttpPost]
    public async Task<ActionResult<RegistroDTO>> criarUsuarioAdm([FromBody] UsuarioAdm usuarioAdm)
    {
 
-      var criarUsuario = _registroRepository.criarUsuarioAdm(usuarioAdm);
+      var criarUsuario = await _registroRepository.criarUsuarioAdm(usuarioAdm);
       if (criarUsuario != null)
       {
        return Created("criado", criarUsuario);
@@ -35,20 +35,7 @@ public class RegistroController : Controller
 
    }
 
-   [HttpPost]
-   public async Task<ActionResult<RegistroDTO>> criarUsuario([FromBody] Usuario usuario)
-   {
-
-      var criarUsuario = _registroRepository.criarUsuario(usuario);
-      if (criarUsuario != null)
-      {
-       return Created("criado", criarUsuario);
-      }
-      else
-      {
-       return BadRequest("Erro");
-      }
-
-   }
+   
+   
 
 }

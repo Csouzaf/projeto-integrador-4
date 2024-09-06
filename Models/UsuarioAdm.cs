@@ -40,12 +40,6 @@ namespace pi_4.Models
         [Column("data_criacao")]
         public DateTime dataCriacao { get; set; }
 
-        [Column("adm_usuario")]
-        public bool admOuUsuario { get; set; }
-
-        [Column("imagem")]
-        public string imagem { get; set; }
-
         public ICollection<UsuarioProduto> produtos { get; } = new List<UsuarioProduto>();
 
        
@@ -54,7 +48,7 @@ namespace pi_4.Models
         public UsuarioAdm()
         {
             id = Guid.NewGuid();
-            dataCriacao = DateTime.Now;
+            dataCriacao = DateTime.UtcNow;
         }
         
     }

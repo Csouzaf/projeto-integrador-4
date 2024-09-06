@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\OneDrive\\Programação\\pi-4\\pi-4.csproj": {}
+    "d:\\OneDrive\\Programação\\pi-4\\pi-4.csproj": {}
   },
   "projects": {
-    "D:\\OneDrive\\Programação\\pi-4\\pi-4.csproj": {
+    "d:\\OneDrive\\Programação\\pi-4\\pi-4.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\OneDrive\\Programação\\pi-4\\pi-4.csproj",
+        "projectUniqueName": "d:\\OneDrive\\Programação\\pi-4\\pi-4.csproj",
         "projectName": "pi-4",
-        "projectPath": "D:\\OneDrive\\Programação\\pi-4\\pi-4.csproj",
+        "projectPath": "d:\\OneDrive\\Programação\\pi-4\\pi-4.csproj",
         "packagesPath": "C:\\Users\\csouz\\.nuget\\packages\\",
-        "outputPath": "D:\\OneDrive\\Programação\\pi-4\\obj\\",
+        "outputPath": "d:\\OneDrive\\Programação\\pi-4\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\csouz\\AppData\\Roaming\\NuGet\\NuGet.Config",

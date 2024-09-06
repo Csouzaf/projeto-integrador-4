@@ -21,7 +21,7 @@ namespace pi_4.Models
 
         public string cpf { get; set; }
 
-        public string nomeLoja { get; set; }
+        //public string nomeLoja { get; set; }
 
         public string cnpj { get; set; }
     }
