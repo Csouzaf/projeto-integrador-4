@@ -9,7 +9,9 @@
 >> 3.1 <br>
 >>> Abra o terminal e digite dotnet ef migrations add FirstMigration <br>
 >> 3.2 <br>
->>> Posteriormente utiliza o ainda no terminal o dotnet ef database update <br><br>
+>>> Posteriormente utiliza o ainda no terminal o dotnet ef database update <br>
+
+>>> Depois inicie no modo debug ou com "dotnet run"<br><br>
 
 >4. Link app frontend: https://github.com/Carlosomr/cardapiosenac <br>
 >5. Rodar aplicação com frontend 

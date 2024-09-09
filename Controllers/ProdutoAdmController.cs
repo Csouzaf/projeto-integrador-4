@@ -34,5 +34,11 @@ public class ProdutoAdmController : Controller
     {
       return await _usuarioAdmRepository.buscarTodosAsync();
     }
+
+    [HttpGet]
+    public async Task<List<UsuarioProduto>> buscarTodosAsync()
+    {
+      return await _usuarioProdutoRepository.buscarTodosAsync();
+    }
   
 }
