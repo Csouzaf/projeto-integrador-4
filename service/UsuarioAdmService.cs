@@ -24,7 +24,7 @@ public class UsuarioAdmService : IUsuarioAdmRepository
      usuarioAdms = await context.usuarioAdm.ToListAsync();
     }
    }
-   catch (System.Exception)
+   catch (Exception ex)
    {
     
     throw;

@@ -19,11 +19,11 @@ public class LoginController : Controller
   [HttpPost]
   public ActionResult<bool> Login(LoginDTO loginDTO)
   {
-    var usuario = _appDbContext.usuario.FirstOrDefault(u => u.email == loginDTO.Email && u.senha == loginDTO.Senha);
+    var usuario = _appDbContext.usuarioAdm.FirstOrDefault(u => u.email == loginDTO.Email && u.senha == loginDTO.Senha);
 
     if (usuario != null)
     {
-      return Json(new { usuario.admOuUsuario });
+      return Json(new {usuario});
     }
     else
     {

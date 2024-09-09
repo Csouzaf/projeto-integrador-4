@@ -6,17 +6,20 @@ using pi_4.Repository;
 namespace pi_4.Controllers;
 
 [ApiController]
-[Route("administrador")]
-public class HomeAdmController : Controller
+[Route("produtos")]
+public class ProdutoAdmController : Controller
 {
    
     private readonly AppDbContext _appDbContext;
     private readonly IUsuarioProdutoRepository _usuarioProdutoRepository;
+    private readonly IUsuarioAdmRepository _usuarioAdmRepository;
 
-    public HomeAdmController(AppDbContext appDbContext, IUsuarioProdutoRepository usuarioProdutoRepository)
+    public ProdutoAdmController(AppDbContext appDbContext, IUsuarioProdutoRepository usuarioProdutoRepository, IUsuarioAdmRepository
+      usuarioAdmRepository)
     {
       _appDbContext = appDbContext;
       _usuarioProdutoRepository = usuarioProdutoRepository;
+      _usuarioAdmRepository = usuarioAdmRepository;
     } 
 
    
@@ -24,6 +27,12 @@ public class HomeAdmController : Controller
     public async Task<UsuarioProduto> criarProdutoAsync(UsuarioProduto usuarioProduto)
     {
         return await _usuarioProdutoRepository.criarProdutoAsync(usuarioProduto);
+    }
+
+    [HttpGet("usuarios")]
+    public async Task<List<UsuarioAdm>> usuariosAdm()
+    {
+      return await _usuarioAdmRepository.buscarTodosAsync();
     }
   
 }

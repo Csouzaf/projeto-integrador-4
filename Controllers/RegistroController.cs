@@ -35,6 +35,8 @@ public class RegistroController : Controller
 
    }
 
+ 
+
    
    
 
